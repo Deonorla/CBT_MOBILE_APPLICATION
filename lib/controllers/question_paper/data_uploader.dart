@@ -1,6 +1,8 @@
 import 'dart:convert';
 
+import 'package:cbt_mobile_application/firebase_ref/references.dart';
 import 'package:cbt_mobile_application/models/question_paper_model.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -14,6 +16,7 @@ class DataUploader extends GetxController {
   }
 
   Future<void> uploadData() async {
+    final firestore = FirebaseFirestore.instance;
     final manifestContent = await DefaultAssetBundle.of(Get.context!)
         .loadString("AssetManifest.json");
     final Map<String, dynamic> manifestMap = json.decode(manifestContent);
@@ -29,6 +32,27 @@ class DataUploader extends GetxController {
       questionPapers
           .add(QuestionPaperModel.fromJson(json.decode(stringPaperContent)));
     }
-    print('Items number ${questionPapers.length}');
+    // print('Items number ${questionPapers.length}');
+    var batch = firestore.batch();
+
+    for (var paper in questionPapers) {
+      batch.set(questionPaperRF.doc(paper.id), {
+        "title": paper.title,
+        "image_url": paper.imageUrl,
+        "description": paper.description,
+        "time_seconds": paper.timeSeconds,
+        "questions_count": paper.questions == null ? 0 : paper.questions!.length
+      });
+      for (var questions in paper.questions!) {
+        final questionPath =
+            questionRF(paperId: paper.id, questionId: questions.id);
+        batch.set(questionPath, {
+          "question": questions.question,
+          "correct_answer": questions.correctAnswer
+        });
+      }
+    }
+    // submits question to firebase database
+    await batch.commit();
   }
 }

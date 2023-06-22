@@ -39,29 +39,29 @@
       "correct_answer": "A"
     },
     {
-      "id": "ppr004q003",
-      "question": "Which law states that the pressure of a gas is inversely proportional to its volume at constant temperature.?",
-      "answers": [
-        { "identifier": "A", "Answer": "Boyle's law" },
-        { "identifier": "B", "Answer": "Ohm's law" },
-        { "identifier": "C", "Answer": "Newton's second law" },
-        { "identifier": "D", "Answer": "Archimedes' principle" }
-      ],
-      "correct_answer": "A"
-    },
-    {
       "id": "ppr004q004",
-      "question": "Which law states that the pressure of a gas is inversely proportional to its volume at constant temperature.?",
+      "question": "Which law states that for every action, there is an equal and opposite reaction.?",
       "answers": [
-        { "identifier": "A", "Answer": "Boyle's law" },
-        { "identifier": "B", "Answer": "Ohm's law" },
-        { "identifier": "C", "Answer": "Newton's second law" },
-        { "identifier": "D", "Answer": "Archimedes' principle" }
+        { "identifier": "A", "Answer": "Newton's First Law" },
+        { "identifier": "B", "Answer": "Newton's Second Law" },
+        { "identifier": "C", "Answer": "Newton's Third Law" },
+        { "identifier": "D", "Answer": "Ohm's Law" }
       ],
-      "correct_answer": "A"
+      "correct_answer": "C"
     },
     {
       "id": "ppr004q005",
+      "question": "What is the unit of power.?",
+      "answers": [
+        { "identifier": "A", "Answer": "Joule" },
+        { "identifier": "B", "Answer": "Watt" },
+        { "identifier": "C", "Answer": "Newton" },
+        { "identifier": "D", "Answer": "Coulomb" }
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "id": "ppr004q006",
       "question": "Which of the following is a fundamental force of nature.?",
       "answers": [
         { "identifier": "A", "Answer": "Boyle's law" },
@@ -72,7 +72,7 @@
       "correct_answer": "A"
     },
     {
-      "id": "ppr004q006",
+      "id": "ppr004q007",
       "question": "What is the wavelength of visible light in the electromagnetic spectrum?",
       "answers": [
         { "identifier": "A", "Answer": "Centimeters" },
