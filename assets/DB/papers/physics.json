@@ -1,0 +1,86 @@
+{
+  "id": "ppr001",
+  "title": "PHY 101",
+  "image_url": "",
+  "Description": "Basic Physics Multiple choice Questions (MCQ)",
+  "time_seconds": 900,
+  "questions": [
+    {
+      "id": "ppr004q001",
+      "question": "Which of the following is an example of a vector quantity.?",
+      "answers": [
+        { "identifier": "A", "Answer": "Mass" },
+        { "identifier": "B", "Answer": "Temperature" },
+        { "identifier": "C", "Answer": "Speed" },
+        { "identifier": "D", "Answer": "Displacement" }
+      ],
+      "correct_answer": "D"
+    },
+    {
+      "id": "ppr004q002",
+      "question": "What is the SI unit of electric current.?",
+      "answers": [
+        { "identifier": "A", "Answer": "Ampere" },
+        { "identifier": "B", "Answer": "Ohm" },
+        { "identifier": "C", "Answer": "Volt" },
+        { "identifier": "D", "Answer": "Coulomb" }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "id": "ppr004q003",
+      "question": "Which law states that the pressure of a gas is inversely proportional to its volume at constant temperature.?",
+      "answers": [
+        { "identifier": "A", "Answer": "Boyle's law" },
+        { "identifier": "B", "Answer": "Ohm's law" },
+        { "identifier": "C", "Answer": "Newton's second law" },
+        { "identifier": "D", "Answer": "Archimedes' principle" }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "id": "ppr004q003",
+      "question": "Which law states that the pressure of a gas is inversely proportional to its volume at constant temperature.?",
+      "answers": [
+        { "identifier": "A", "Answer": "Boyle's law" },
+        { "identifier": "B", "Answer": "Ohm's law" },
+        { "identifier": "C", "Answer": "Newton's second law" },
+        { "identifier": "D", "Answer": "Archimedes' principle" }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "id": "ppr004q004",
+      "question": "Which law states that the pressure of a gas is inversely proportional to its volume at constant temperature.?",
+      "answers": [
+        { "identifier": "A", "Answer": "Boyle's law" },
+        { "identifier": "B", "Answer": "Ohm's law" },
+        { "identifier": "C", "Answer": "Newton's second law" },
+        { "identifier": "D", "Answer": "Archimedes' principle" }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "id": "ppr004q005",
+      "question": "Which of the following is a fundamental force of nature.?",
+      "answers": [
+        { "identifier": "A", "Answer": "Boyle's law" },
+        { "identifier": "B", "Answer": "Ohm's law" },
+        { "identifier": "C", "Answer": "Newton's second law" },
+        { "identifier": "D", "Answer": "Archimedes' principle" }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "id": "ppr004q006",
+      "question": "What is the wavelength of visible light in the electromagnetic spectrum?",
+      "answers": [
+        { "identifier": "A", "Answer": "Centimeters" },
+        { "identifier": "B", "Answer": "Kilometers" },
+        { "identifier": "C", "Answer": "Meters" },
+        { "identifier": "D", "Answer": "Nanometers" }
+      ],
+      "correct_answer": "D"
+    }
+  ]
+}
