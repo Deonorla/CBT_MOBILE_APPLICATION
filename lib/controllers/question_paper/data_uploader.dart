@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:cbt_mobile_application/firebase_ref/loading_status.dart';
 import 'package:cbt_mobile_application/firebase_ref/references.dart';
 import 'package:cbt_mobile_application/models/question_paper_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -15,6 +16,8 @@ class DataUploader extends GetxController {
     super.onReady();
   }
 
+// obs lets a veriable become observable
+  final loadingStatus = LoadingStatus.loading.obs;
   Future<void> uploadData() async {
     final firestore = FirebaseFirestore.instance;
     final manifestContent = await DefaultAssetBundle.of(Get.context!)
@@ -50,6 +53,10 @@ class DataUploader extends GetxController {
           "question": questions.question,
           "correct_answer": questions.correctAnswer
         });
+        for (var answer in questions.answers) {
+          batch.set(questionPath.collection("answers").doc(answer.identifier),
+              {"identifier": answer.identifier, "answers": answer.answer});
+        }
       }
     }
     // submits question to firebase database
