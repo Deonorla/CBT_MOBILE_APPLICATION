@@ -12,6 +12,8 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.5
+  liquid_swipe: ^3.1.0
+  smooth_page_indicator: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -23,4 +25,4 @@ flutter:
 
   assets:
     - assets/DB/papers/
-    - assets/images/
+    - assets/images/splash_images/
