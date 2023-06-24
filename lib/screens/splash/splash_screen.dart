@@ -61,13 +61,17 @@ class SplashScreen extends StatelessWidget {
                       ),
                     )),
         ),
-        Positioned(
-            top: size.height / 16,
-            right: size.width / 15,
-            child: TextButton(
-              onPressed: () => obController.skip(),
-              child: const Text("Skip", style: TextStyle(color: Colors.grey)),
-            )),
+        Obx(
+          () => Positioned(
+              top: size.height / 16,
+              right: size.width / 15,
+              child: TextButton(
+                onPressed: () => obController.skip(),
+                child: obController.currentPage.value != 2
+                    ? const Text("Skip", style: TextStyle(color: Colors.grey))
+                    : const SizedBox(),
+              )),
+        ),
         Obx(
           () => Positioned(
               bottom: size.height / 23,

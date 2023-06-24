@@ -21,12 +21,12 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
+  
 // Future<void> main() async {
 //   WidgetsFlutterBinding.ensureInitialized();
 //   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 //   runApp(GetMaterialApp(
-//     // Gets called only onnce on app start
+    // Gets called only onnce on app start
 //     home: DataUploaderScreen(),
 //   ));
 // }
