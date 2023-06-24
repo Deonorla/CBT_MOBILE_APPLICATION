@@ -8,7 +8,7 @@ import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class SplashScreen extends StatelessWidget {
-  SplashScreen({super.key});
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,31 +19,48 @@ class SplashScreen extends StatelessWidget {
         body: Stack(
       alignment: Alignment.center,
       children: [
-        LiquidSwipe(
-          pages: obController.pages,
-          slideIconWidget: const Icon(Icons.arrow_back_ios_new),
-          enableSideReveal: true,
-          onPageChangeCallback: obController.onPageChange,
-          liquidController: obController.controller,
+        Obx(
+          () => LiquidSwipe(
+            pages: obController.pages,
+            slideIconWidget: obController.currentPage.value != 2
+                ? const Icon(Icons.arrow_back_ios_new)
+                : Container(),
+            enableSideReveal: true,
+            onPageChangeCallback: obController.onPageChange,
+            liquidController: obController.controller,
+            enableLoop: false,
+          ),
         ),
-        Positioned(
-            bottom: size.height / 14,
-            child: OutlinedButton(
-              onPressed: () => obController.animateToNextSlide(),
-              style: ElevatedButton.styleFrom(
-                  side: const BorderSide(color: Colors.black26),
-                  shape: const CircleBorder(),
-                  padding: const EdgeInsets.all(15),
-                  foregroundColor: Colors.white),
-              child: Container(
-                padding: const EdgeInsets.all(15),
-                decoration: const BoxDecoration(
-                  color: darkColor,
-                  shape: BoxShape.circle,
-                ),
-                child: const Icon(Icons.arrow_forward_ios),
-              ),
-            )),
+        Obx(
+          () => Positioned(
+              bottom: size.height / 14,
+              child: obController.currentPage.value != 2
+                  ? OutlinedButton(
+                      onPressed: () => obController.animateToNextSlide(),
+                      style: ElevatedButton.styleFrom(
+                          side: const BorderSide(color: Colors.black26),
+                          shape: const CircleBorder(),
+                          padding: const EdgeInsets.all(15),
+                          foregroundColor: Colors.white),
+                      child: Container(
+                          padding: const EdgeInsets.all(15),
+                          decoration: const BoxDecoration(
+                            color: darkColor,
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Icon(Icons.arrow_forward_ios)),
+                    )
+                  : ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black, elevation: 0),
+                      child: const Text(
+                        "Get Started",
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.w500),
+                      ),
+                    )),
+        ),
         Positioned(
             top: size.height / 16,
             right: size.width / 15,
