@@ -57,7 +57,7 @@ class SplashScreen extends StatelessWidget {
                       child: const Text(
                         "Get Started",
                         style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w500),
+                            fontSize: 15, fontWeight: FontWeight.w700),
                       ),
                     )),
         ),

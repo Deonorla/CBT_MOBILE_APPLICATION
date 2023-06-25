@@ -1,3 +1,5 @@
+import 'package:cbt_mobile_application/bindings/initial_bindings.dart';
+import 'package:cbt_mobile_application/configs/themes/app_light_theme.dart';
 import 'package:cbt_mobile_application/data_uploader_screen.dart';
 import 'package:cbt_mobile_application/screens/splash/splash_screen.dart';
 import 'package:cbt_mobile_application/screens/welcome_screen/welcome_screen.dart';
@@ -5,9 +7,12 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 // Import the generated file
+import 'controllers/theme_controller.dart';
 import 'firebase_options.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  InitialBindings().dependencies();
   runApp(const MyApp());
 }
 
@@ -17,6 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: Get.find<ThemeController>().lightTheme,
       home: WelcomeScreen(),
     );
   }

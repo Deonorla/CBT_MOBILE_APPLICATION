@@ -23,19 +23,22 @@ class OnBoardingPage extends StatelessWidget {
             image: AssetImage(model.image),
             height: size.height * 0.5,
           ),
-          Column(
-            children: [
-              Text(
-                model.title,
-                style:
-                    const TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
-              ),
-              const SizedBox(height: 5),
-              Text(
-                model.subTitle,
-                textAlign: TextAlign.center,
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Text(
+                  model.title,
+                  style: const TextStyle(
+                      fontSize: 25, fontWeight: FontWeight.w700),
+                ),
+                const SizedBox(height: 5),
+                Text(
+                  model.subTitle,
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
           ),
           Text(
             model.counterText,
