@@ -6,6 +6,6 @@ class WelcomeScreenController extends GetxController {
 
   Future changeScreen() async {
     await Future.delayed(const Duration(milliseconds: 5000));
-    Get.to(() => SplashScreen());
+    Get.to(() => const SplashScreen());
   }
 }

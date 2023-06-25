@@ -1,6 +1,7 @@
 import 'package:cbt_mobile_application/constants/colors.dart';
 
 import 'package:cbt_mobile_application/controllers/question_paper/splash_screen_controller/onBoardingController.dart';
+import 'package:cbt_mobile_application/screens/home/home_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -51,7 +52,9 @@ class SplashScreen extends StatelessWidget {
                           child: const Icon(Icons.arrow_forward_ios)),
                     )
                   : ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed("/home");
+                      },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black, elevation: 0),
                       child: const Text(
