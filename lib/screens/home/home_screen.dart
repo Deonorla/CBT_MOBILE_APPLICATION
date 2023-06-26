@@ -8,17 +8,19 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     QuestionPaperController _questionPaperController = Get.find();
     return Scaffold(
-      body: ListView.separated(
+        body: Obx(
+      () => ListView.separated(
         itemBuilder: (BuildContext context, int index) {
           return ClipRRect(
             child: SizedBox(
               height: 200,
               width: 200,
               child: FadeInImage(
-                  placeholder:
-                      AssetImage("assets/images/splash_images/books-pile.png"),
-                  image: NetworkImage(
-                      _questionPaperController.allPaperImages[index])),
+                image: NetworkImage(
+                    _questionPaperController.allPaperImages[index]),
+                placeholder: const AssetImage(
+                    "assets/images/splash_images/books-pile.png"),
+              ),
             ),
           );
         },
@@ -29,6 +31,6 @@ class HomeScreen extends StatelessWidget {
         },
         itemCount: _questionPaperController.allPaperImages.length,
       ),
-    );
+    ));
   }
 }

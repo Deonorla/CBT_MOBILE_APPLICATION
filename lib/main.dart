@@ -11,8 +11,9 @@ import 'package:get/get.dart';
 import 'controllers/theme_controller.dart';
 import 'firebase_options.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   InitialBindings().dependencies();
   runApp(const MyApp());
 }

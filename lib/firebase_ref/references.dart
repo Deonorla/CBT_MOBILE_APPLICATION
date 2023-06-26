@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
 // once invoked it creates a collection named questionPaper in the firebase backend
 final fireStore = FirebaseFirestore.instance;
@@ -8,3 +9,4 @@ DocumentReference questionRF({
   required String questionId,
 }) =>
     questionPaperRF.doc(paperId).collection("questions").doc(questionId);
+Reference get firebaseStorage => FirebaseStorage.instance.ref();
