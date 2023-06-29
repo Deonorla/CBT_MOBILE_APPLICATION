@@ -5,7 +5,8 @@ const secondaryColor = Color(0xFF272727);
 
 const whiteColor = Colors.white;
 const darkColor = Colors.black;
-const cardBgCollor = Color(0xFFF7F6F1);
+const cardBgColor = Color(0xFFF7F6F1);
+const borderLineColor = Color.fromARGB(255, 150, 150, 150);
 
 // ON BOARDING COLORS
 

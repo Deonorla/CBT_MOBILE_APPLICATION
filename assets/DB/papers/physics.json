@@ -2,7 +2,7 @@
   "id": "ppr001",
   "title": "PHY 101",
   "image_url": "",
-  "Description": "Basic Physics Multiple choice Questions (MCQ)",
+  "description": "Basic Physics Multiple choice Questions (MCQ)",
   "time_seconds": 900,
   "questions": [
     {

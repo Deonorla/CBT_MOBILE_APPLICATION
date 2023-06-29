@@ -13,6 +13,7 @@ import 'firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // initialize firebase
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   InitialBindings().dependencies();
   runApp(const MyApp());
@@ -29,12 +30,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-  
-// Future<void> main() async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-//   runApp(GetMaterialApp(
-    // Gets called only onnce on app start
-//     home: DataUploaderScreen(),
-//   ));
-// }
