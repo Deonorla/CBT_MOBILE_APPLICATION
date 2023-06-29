@@ -2,6 +2,7 @@ import 'package:cbt_mobile_application/bindings/initial_bindings.dart';
 import 'package:cbt_mobile_application/configs/themes/app_light_theme.dart';
 import 'package:cbt_mobile_application/data_uploader_screen.dart';
 import 'package:cbt_mobile_application/routes/app_routes.dart';
+import 'package:cbt_mobile_application/screens/home/home_screen.dart';
 import 'package:cbt_mobile_application/screens/splash/splash_screen.dart';
 import 'package:cbt_mobile_application/screens/welcome_screen/welcome_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
