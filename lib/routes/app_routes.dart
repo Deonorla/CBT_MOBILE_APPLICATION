@@ -5,12 +5,12 @@ import 'package:get/get.dart';
 
 class AppRoutes {
   static List<GetPage> routes() => [
-        // GetPage(name: "/", page: () => WelcomeScreen()),
-        GetPage(
-            name: "/",
-            page: () => const HomeScreen(),
-            binding: BindingsBuilder(() {
-              Get.put(QuestionPaperController());
-            }))
+        GetPage(name: "/", page: () => WelcomeScreen()),
+        // GetPage(
+        //     name: "/",
+        //     page: () => const HomeScreen(),
+        //     binding: BindingsBuilder(() {
+        //       Get.put(QuestionPaperController());
+        //     }))
       ];
 }
