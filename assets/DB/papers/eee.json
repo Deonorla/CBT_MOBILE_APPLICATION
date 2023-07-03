@@ -1,0 +1,128 @@
+{
+  "id": "ppr002",
+  "title": "EEE 101",
+  "image_url": "",
+  "description": "Basic Electrical and Electronics Engineering Multiple choice Questions (MCQ)",
+  "time_seconds": 900,
+  "questions": [
+    {
+      "id": "ppr001q001",
+      "question": "What is the concept behind maximum power transfer theorem in electrical circuits.?",
+      "answers": [
+        {
+          "identifier": "A",
+          "Answer": "To maximize power efficiency in a circuit"
+        },
+        {
+          "identifier": "B",
+          "Answer": "To maximize power transfer from a source to a load"
+        },
+        {
+          "identifier": "C",
+          "Answer": "To maximize power generation in a circuit"
+        },
+        {
+          "identifier": "D",
+          "Answer": "To minimize power consumption in a circuit"
+        }
+      ],
+      "correct_answer": "B"
+    },
+    {
+      "id": "ppr001q002",
+      "question": "What is the purpose of a Schottky diode in electronic circuits.?",
+      "answers": [
+        { "identifier": "A", "Answer": "To provide voltage regulation" },
+        { "identifier": "B", "Answer": "To control signal amplification" },
+        {
+          "identifier": "C",
+          "Answer": "To protect against reverse current flow"
+        },
+        {
+          "identifier": "D",
+          "Answer": "To generate high-frequency oscillations"
+        }
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "id": "ppr001q003",
+      "question": "What is the primary function of a Field-Effect Transistor (FET) in electronic devices.?",
+      "answers": [
+        { "identifier": "A", "Answer": "To amplify electrical signals" },
+        { "identifier": "B", "Answer": "To generate high-frequency waves" },
+        { "identifier": "C", "Answer": "To provide voltage regulation" },
+        { "identifier": "D", "Answer": "To control current flow" }
+      ],
+      "correct_answer": "D"
+    },
+    {
+      "id": "ppr001q004",
+      "question": "What is the purpose of a decoupling capacitor in a power supply circuit.?",
+      "answers": [
+        { "identifier": "A", "Answer": "To smooth the output voltage" },
+        { "identifier": "B", "Answer": "To provide short-circuit protection" },
+        { "identifier": "C", "Answer": "To block high-frequency noise" },
+        { "identifier": "D", "Answer": "To limit the current flow" }
+      ],
+      "correct_answer": "C"
+    },
+    {
+      "id": "ppr001q005",
+      "question": "What is the significance of the Q factor in resonance circuits.?",
+      "answers": [
+        {
+          "identifier": "A",
+          "Answer": "It indicates the bandwidth of the circuit"
+        },
+        {
+          "identifier": "B",
+          "Answer": "It determines the power factor of the circuit"
+        },
+        {
+          "identifier": "C",
+          "Answer": "It measures the efficiency of the circuit"
+        },
+        {
+          "identifier": "D",
+          "Answer": "It quantifies the quality of the circuit's response"
+        }
+      ],
+      "correct_answer": "D"
+    },
+    {
+      "id": "ppr001q006",
+      "question": "What is the concept behind electromagnetic induction.?",
+      "answers": [
+        {
+          "identifier": "A",
+          "Answer": "The generation of an electric field due to a changing magnetic field"
+        },
+        {
+          "identifier": "B",
+          "Answer": "The production of a magnetic field due to an electric current"
+        },
+        {
+          "identifier": "C",
+          "Answer": "The creation of an electric potential due to a static magnetic field"
+        },
+        {
+          "identifier": "D",
+          "Answer": "The conversion of mechanical energy into electrical energy"
+        }
+      ],
+      "correct_answer": "A"
+    },
+    {
+      "id": "ppr001q007",
+      "question": "What is the purpose of a PID controller in control systems.?",
+      "answers": [
+        { "identifier": "A", "Answer": "To amplify electrical signals" },
+        { "identifier": "B", "Answer": "To provide closed-loop control" },
+        { "identifier": "C", "Answer": "To generate random signals" },
+        { "identifier": "D", "Answer": "To regulate temperature " }
+      ],
+      "correct_answer": "B"
+    }
+  ]
+}

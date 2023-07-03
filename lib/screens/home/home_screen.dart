@@ -18,11 +18,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
 
-  List<Widget> pages = const [
-    Home(),
-    Text("View"),
-    Text("View"),
-  ];
+  List<Widget> pages = const [Home(), Text("View"), Text("Profile")];
 
   @override
   Widget build(BuildContext context) {
@@ -34,8 +30,8 @@ class _HomeScreenState extends State<HomeScreen> {
         body: pages[_currentIndex],
         bottomNavigationBar: NavigationBarTheme(
           data: const NavigationBarThemeData(
-              // indicatorColor: Colors.white,
-              ),
+              // indicatorColor: onboardingColorPage3,
+              elevation: 10),
           child: NavigationBar(
               selectedIndex: _currentIndex,
               onDestinationSelected: (int index) {
@@ -53,10 +49,17 @@ class _HomeScreenState extends State<HomeScreen> {
                     label: ""),
                 NavigationDestination(
                     selectedIcon: Icon(
-                      CupertinoIcons.folder_fill,
+                      CupertinoIcons.square_stack_3d_up_fill,
                       color: Colors.black,
                     ),
-                    icon: Icon(CupertinoIcons.folder_badge_plus),
+                    icon: Icon(CupertinoIcons.square_stack_3d_up),
+                    label: ""),
+                NavigationDestination(
+                    selectedIcon: Icon(
+                      CupertinoIcons.person_alt,
+                      color: Colors.black,
+                    ),
+                    icon: Icon(CupertinoIcons.person),
                     label: ""),
               ]),
         ));
