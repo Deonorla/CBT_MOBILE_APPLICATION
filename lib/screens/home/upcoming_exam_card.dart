@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cbt_mobile_application/constants/colors.dart';
 import 'package:cbt_mobile_application/models/question_paper_model.dart';
@@ -10,6 +12,18 @@ class UpcomingExamCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    List color = const [
+      Color.fromARGB(255, 205, 152, 152),
+      Color(0xffB4C6A6),
+      Color.fromARGB(255, 189, 167, 175),
+      Color.fromARGB(255, 137, 172, 157),
+      Color.fromARGB(255, 199, 182, 143),
+      Color.fromARGB(255, 148, 192, 221),
+    ];
+    Color randColor() {
+      return color[Random().nextInt(6)];
+    }
+
     return Stack(
       alignment: Alignment.center,
       children: [
@@ -19,9 +33,9 @@ class UpcomingExamCard extends StatelessWidget {
               width: double.infinity,
               padding: const EdgeInsets.all(12),
               margin: const EdgeInsets.all(20),
-              decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 161, 207, 245),
-                  borderRadius: BorderRadius.all(Radius.circular(12))),
+              decoration: BoxDecoration(
+                  color: randColor(),
+                  borderRadius: const BorderRadius.all(Radius.circular(12))),
               child: Column(
                 children: [
                   Row(

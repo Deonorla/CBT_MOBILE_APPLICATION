@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: Get.find<ThemeController>().lightTheme,
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
