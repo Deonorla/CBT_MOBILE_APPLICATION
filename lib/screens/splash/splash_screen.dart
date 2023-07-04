@@ -1,6 +1,6 @@
 import 'package:cbt_mobile_application/constants/colors.dart';
 import 'package:cbt_mobile_application/controllers/question_paper/splash_screen_controller/onBoardingController.dart';
-import 'package:cbt_mobile_application/screens/home/home_screen.dart';
+import 'package:cbt_mobile_application/screens/signup/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
@@ -54,7 +54,7 @@ class SplashScreen extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const HomeScreen()));
+                                builder: (context) => const SignUp()));
                       },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black, elevation: 0),

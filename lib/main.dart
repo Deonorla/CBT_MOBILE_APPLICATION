@@ -1,5 +1,6 @@
 import 'package:cbt_mobile_application/bindings/initial_bindings.dart';
 import 'package:cbt_mobile_application/configs/themes/app_light_theme.dart';
+import 'package:cbt_mobile_application/controllers/auth/auth_controller.dart';
 import 'package:cbt_mobile_application/data_uploader_screen.dart';
 import 'package:cbt_mobile_application/routes/app_routes.dart';
 import 'package:cbt_mobile_application/screens/home/home_screen.dart';
@@ -17,7 +18,8 @@ import 'firebase_options.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // initialize firebase
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform)
+      .then((value) => Get.put(AuthController()));
   InitialBindings().dependencies();
   runApp(const MyApp());
 }
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: Get.find<ThemeController>().lightTheme,
-      home: const Login(),
+      home: WelcomeScreen(),
     );
   }
 }
