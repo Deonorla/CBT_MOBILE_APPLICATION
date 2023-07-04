@@ -20,7 +20,7 @@ class FormHeaderWidget extends StatelessWidget {
           image: AssetImage(
             image,
           ),
-          height: size.height * 0.2,
+          height: size.height * 0.25,
         ),
         Text(
           title,

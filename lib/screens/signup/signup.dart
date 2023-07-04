@@ -1,5 +1,6 @@
 import 'package:cbt_mobile_application/screens/signup/widgets/form_header_widget.dart';
 import 'package:flutter/material.dart';
+import 'widgets/sign_up_widget_form.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
@@ -18,12 +19,14 @@ class SignUp extends StatelessWidget {
                 image: "assets/images/splash_images/sign.png",
                 subTitle: "Create your profile to get onboarded",
               ),
-              Container(
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                child: Form(
-                    child: Column(
-                  children: [],
-                )),
+              const SignUpWidgetForm(),
+              Center(
+                child: TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Already have an account? Login",
+                      style: TextStyle(fontSize: 16),
+                    )),
               )
             ],
           ),
