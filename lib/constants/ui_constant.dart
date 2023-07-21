@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-
+import 'package:cbt_mobile_application/controllers/auth/auth_controller.dart';
+import 'package:get/get.dart';
 import 'colors.dart';
 
 class UiConstant {
   static AppBar appBar() {
+    final controller = Get.put(AuthController());
     return AppBar(
       backgroundColor: primaryColor,
       elevation: 0,
@@ -30,13 +32,16 @@ class UiConstant {
           child: Image.asset("assets/images/splash_images/avatar.png"),
         ),
       ),
-      actions: const [
+      actions: [
         Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Icon(
-            Icons.notifications_outlined,
-            size: 25,
-            color: Colors.black,
+          padding: const EdgeInsets.all(8.0),
+          child: TextButton(
+            onPressed: () => controller.logout(),
+            child: const Icon(
+              Icons.notifications_outlined,
+              size: 25,
+              color: Colors.black,
+            ),
           ),
         )
       ],

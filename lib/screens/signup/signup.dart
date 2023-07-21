@@ -1,5 +1,7 @@
+import 'package:cbt_mobile_application/screens/login/login.dart';
 import 'package:cbt_mobile_application/screens/signup/widgets/form_header_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'widgets/sign_up_widget_form.dart';
 
 class SignUp extends StatelessWidget {
@@ -22,7 +24,8 @@ class SignUp extends StatelessWidget {
               const SignUpWidgetForm(),
               Center(
                 child: TextButton(
-                    onPressed: () {},
+                    onPressed: () => Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const Login())),
                     child: const Text(
                       "Already have an account? Login",
                       style: TextStyle(fontSize: 16),

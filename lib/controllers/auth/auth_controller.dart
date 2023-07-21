@@ -2,9 +2,12 @@ import 'package:cbt_mobile_application/exceptions/signup_email_password_failure.
 import 'package:cbt_mobile_application/firebase_ref/references.dart';
 import 'package:cbt_mobile_application/screens/home/home_screen.dart';
 import 'package:cbt_mobile_application/screens/welcome_screen/welcome_screen.dart';
+import 'package:cbt_mobile_application/widgets/toast.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 
 class AuthController extends GetxController {
   static AuthController get instance => Get.find();
@@ -29,10 +32,16 @@ class AuthController extends GetxController {
       await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
       firebaseUser.value != null
-          ? Get.offAll(() => const HomeScreen())
+          ? {
+              Get.offAll(() => const HomeScreen()),
+              Toast.show(Get.context, "SignUp Successful", "Welcome",
+                  ContentType.success)
+            }
           : Get.to(() => WelcomeScreen());
     } on FirebaseAuthException catch (e) {
       final ex = SignUpWithEmailAndPasswordFailure.code(e.code);
+      Toast.show(Get.context, "An error occurred try signing in again", "Ooops",
+          ContentType.failure);
       print('FIREBASE AUTH EXCEPTION = ${ex.message}');
       throw ex;
     } catch (e) {
@@ -44,10 +53,25 @@ class AuthController extends GetxController {
 
   void loginWithEmailAndPassword(String email, String password) async {
     try {
-      await _auth.signInWithEmailAndPassword(email: email, password: password);
+      await _auth
+          .signInWithEmailAndPassword(email: email, password: password)
+          .then((value) => Toast.show(
+              Get.context,
+              "You are successfully logged In",
+              "Welcome Back",
+              ContentType.success));
     } on FirebaseAuthException catch (e) {
-      e.code;
-    } catch (e) {}
+      if (e.code == 'user-not-found') {
+        Toast.show(Get.context, "User not found try signing up", "Ooops",
+            ContentType.failure);
+      } else if (e.code == 'wrong-password') {
+        Toast.show(Get.context, "Your password is incorrect", "Ooops",
+            ContentType.failure);
+        ;
+      }
+    } catch (e) {
+      print(e);
+    }
   }
 
   Future<void> logout() async => await _auth.signOut();

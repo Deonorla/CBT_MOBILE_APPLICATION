@@ -2,7 +2,6 @@ import 'package:cbt_mobile_application/bindings/initial_bindings.dart';
 import 'package:cbt_mobile_application/configs/themes/app_light_theme.dart';
 import 'package:cbt_mobile_application/controllers/auth/auth_controller.dart';
 import 'package:cbt_mobile_application/data_uploader_screen.dart';
-import 'package:cbt_mobile_application/routes/app_routes.dart';
 import 'package:cbt_mobile_application/screens/home/home_screen.dart';
 import 'package:cbt_mobile_application/screens/login/login.dart';
 import 'package:cbt_mobile_application/screens/signup/signup.dart';
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: Get.find<ThemeController>().lightTheme,
-      home: WelcomeScreen(),
+      home: const CircularProgressIndicator(),
     );
   }
 }

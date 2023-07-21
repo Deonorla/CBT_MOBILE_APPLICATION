@@ -100,7 +100,7 @@ class SignUpWidgetForm extends StatelessWidget {
                       if (_formkey.currentState!.validate()) {
                         SignUpController.instance.registerUser(
                             controller.email.text.trim(),
-                            controller.email.text.trim());
+                            controller.password.text.trim());
                       }
                     },
                     child: Text(

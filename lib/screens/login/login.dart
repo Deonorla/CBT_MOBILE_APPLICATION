@@ -1,6 +1,10 @@
+import 'package:cbt_mobile_application/screens/signup/signup.dart';
 import 'package:cbt_mobile_application/screens/signup/widgets/form_header_widget.dart';
+import 'package:cbt_mobile_application/widgets/toast.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'widget/login_form_widget.dart';
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -21,7 +25,9 @@ class Login extends StatelessWidget {
             const LoginFormWidget(),
             Center(
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(() => const SignUp());
+                  },
                   child: const Text(
                     "Don't have an account? SignUp",
                     style: TextStyle(fontSize: 16),
