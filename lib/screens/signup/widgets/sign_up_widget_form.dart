@@ -1,5 +1,6 @@
 import 'package:cbt_mobile_application/constants/colors.dart';
 import 'package:cbt_mobile_application/controllers/auth/signup_controller.dart';
+import 'package:cbt_mobile_application/models/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -98,6 +99,18 @@ class SignUpWidgetForm extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(vertical: 10)),
                     onPressed: () {
                       if (_formkey.currentState!.validate()) {
+                        // SignUpController.instance.registerUser(
+                        //     controller.email.text.trim(),
+                        //     controller.password.text.trim());
+
+                        //
+                        final user = UserModel(
+                            fullName: controller.fullName.text.trim(),
+                            matricNo: controller.matricNo.text.trim(),
+                            email: controller.email.text.trim(),
+                            phoneNo: controller.phoneNo.text.trim(),
+                            password: controller.password.text.trim());
+                        SignUpController.instance.createUser(user);
                         SignUpController.instance.registerUser(
                             controller.email.text.trim(),
                             controller.password.text.trim());
