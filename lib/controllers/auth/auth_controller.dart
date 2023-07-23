@@ -1,12 +1,12 @@
 import 'package:cbt_mobile_application/exceptions/signup_email_password_failure.dart';
-import 'package:cbt_mobile_application/firebase_ref/references.dart';
+
 import 'package:cbt_mobile_application/screens/home/home_screen.dart';
 import 'package:cbt_mobile_application/screens/welcome_screen/welcome_screen.dart';
 import 'package:cbt_mobile_application/widgets/toast.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 
 class AuthController extends GetxController {
@@ -74,7 +74,9 @@ class AuthController extends GetxController {
     }
   }
 
-  Future<void> logout() async => await _auth.signOut();
+  Future<void> logout() async =>
+      await _auth.signOut().whenComplete(() => Toast.show(Get.context,
+          "Logged out Successfull", "Logged Out", ContentType.success));
 
   // late FirebaseAuth _auth;
   // final _user = Rxn<User>();

@@ -8,6 +8,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'Home.dart';
+import 'package:cbt_mobile_application/screens/view/view_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -19,7 +20,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
 
-  List<Widget> pages = const [Home(), Text("View"), Profile()];
+  List<Widget> pages = const [Home(), ViewScreen(), Profile()];
 
   @override
   Widget build(BuildContext context) {

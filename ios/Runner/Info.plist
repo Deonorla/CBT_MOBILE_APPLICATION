@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key></key>
+	<string></string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Access to photos for image upload</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Access to photos for image upload</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Listen  for activities</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Monitor Exams</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
