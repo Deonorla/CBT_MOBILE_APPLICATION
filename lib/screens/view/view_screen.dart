@@ -1,11 +1,15 @@
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:camera/camera.dart';
-import 'package:cbt_mobile_application/constants/colors.dart';
+import 'package:cbt_mobile_application/screens/view/question_paper_screen.dart';
+
 import 'package:cbt_mobile_application/utils/face_detection/face_detection_util.dart';
 import 'package:cbt_mobile_application/widgets/toast.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_mlkit_face_detection/google_mlkit_face_detection.dart';
+
+import '../../constants/colors.dart';
 
 class ViewScreen extends StatefulWidget {
   const ViewScreen({super.key});
@@ -138,6 +142,22 @@ class _ViewScreenState extends State<ViewScreen> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return _buildVideoSection();
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.camera_alt),
+      ),
+      body: SafeArea(
+        child: Container(
+          margin: const EdgeInsets.all(10),
+          child: Column(
+            children: [
+              // _buildVideoSection(),
+              const QuestionScreen()
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
