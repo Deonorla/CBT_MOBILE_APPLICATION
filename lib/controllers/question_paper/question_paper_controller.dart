@@ -1,11 +1,13 @@
 import 'package:cbt_mobile_application/firebase_ref/references.dart';
 import 'package:cbt_mobile_application/models/question_paper_model.dart';
+import 'package:cbt_mobile_application/screens/view/question_paper_screen.dart';
 import 'package:cbt_mobile_application/services/firebase_storage_service.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
 
 class QuestionPaperController extends GetxController {
   // final allPaperImages = <String>[].obs;
+  static QuestionPaperController get instance => Get.find();
   final controller = Get.put(FirebaseStorageService());
   final allPapers = <QuestionPaperModel>[].obs;
   @override
@@ -34,5 +36,9 @@ class QuestionPaperController extends GetxController {
     } catch (e) {
       print(e);
     }
+  }
+
+  void navigateToQuestions({required QuestionPaperModel paper}) {
+    Get.to(const QuestionScreen(), arguments: paper);
   }
 }

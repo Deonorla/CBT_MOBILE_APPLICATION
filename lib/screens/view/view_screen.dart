@@ -153,7 +153,7 @@ class _ViewScreenState extends State<ViewScreen> with WidgetsBindingObserver {
           child: Column(
             children: [
               // _buildVideoSection(),
-              const QuestionScreen()
+              // const QuestionScreen()
             ],
           ),
         ),
