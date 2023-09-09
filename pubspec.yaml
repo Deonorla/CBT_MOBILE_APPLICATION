@@ -12,6 +12,7 @@ dependencies:
   camera: ^0.10.5+2
   cloud_firestore: ^4.8.1
   cupertino_icons: ^1.0.5
+  easy_separator: ^1.0.1
   firebase_auth: ^4.6.3
   firebase_core: ^2.14.0
   firebase_storage:
@@ -25,6 +26,7 @@ dependencies:
   liquid_swipe: ^3.1.0
   path_provider: ^2.0.15
   percent_indicator: ^4.2.3
+  shimmer: ^3.0.0
   smooth_page_indicator: ^1.1.0
 
 dev_dependencies:

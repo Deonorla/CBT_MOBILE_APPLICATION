@@ -1,12 +1,5 @@
 import 'package:cbt_mobile_application/bindings/initial_bindings.dart';
-import 'package:cbt_mobile_application/configs/themes/app_light_theme.dart';
 import 'package:cbt_mobile_application/controllers/auth/auth_controller.dart';
-import 'package:cbt_mobile_application/data_uploader_screen.dart';
-import 'package:cbt_mobile_application/screens/home/home_screen.dart';
-import 'package:cbt_mobile_application/screens/login/login.dart';
-import 'package:cbt_mobile_application/screens/signup/signup.dart';
-import 'package:cbt_mobile_application/screens/splash/splash_screen.dart';
-import 'package:cbt_mobile_application/screens/welcome_screen/welcome_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

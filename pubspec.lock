@@ -193,6 +193,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  easy_separator:
+    dependency: "direct main"
+    description:
+      name: easy_separator
+      sha256: "619b8add6612ba2d806219e34b59fb48d99845f466bdfdfc004321080e63e179"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   fake_async:
     dependency: transitive
     description:
@@ -669,6 +677,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.27.7"
+  shimmer:
+    dependency: "direct main"
+    description:
+      name: shimmer
+      sha256: "5f88c883a22e9f9f299e5ba0e4f7e6054857224976a5d9f839d4ebdc94a14ac9"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.0"
   sky_engine:
     dependency: transitive
     description: flutter

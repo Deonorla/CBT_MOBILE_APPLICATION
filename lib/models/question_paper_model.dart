@@ -99,6 +99,10 @@ class Answers {
       : identifier = json['identifier'],
         answer = json['Answer'];
 
+  Answers.fromSnapshot(QueryDocumentSnapshot<Map<String, dynamic>> snapshot)
+      : identifier = snapshot['identifier'] as String?,
+        answer = snapshot['answers'] as String;
+
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['identifier'] = this.identifier;
