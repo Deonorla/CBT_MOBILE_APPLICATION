@@ -57,6 +57,7 @@ class Questions {
   String question;
   List<Answers> answers;
   String? correctAnswer;
+  String? selectedAnswer;
 
   Questions(
       {required this.id,

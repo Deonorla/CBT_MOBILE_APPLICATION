@@ -9,7 +9,13 @@ class QuestionController extends GetxController {
   final loadingStatus = LoadingStatus.loading.obs;
   late QuestionPaperModel questionPaperModel;
   final allQuestions = <Questions>[];
+
+  final questionIndex = 0.obs;
+
+  bool get isFirstQuestion => questionIndex.value > 0;
+
   Rxn<Questions> currentQuestion = Rxn<Questions>();
+
   @override
   void onReady() {
     final _questionPaper = Get.arguments as QuestionPaperModel;
@@ -60,6 +66,20 @@ class QuestionController extends GetxController {
       if (kDebugMode) {
         print(e.toString());
       }
+    }
+  }
+
+  void selectedAnswer(String? answer) {
+    currentQuestion.value!.selectedAnswer = answer;
+    update();
+  }
+
+  void nextquestion() {
+    if (questionIndex.value >= allQuestions.length - 1) {
+      return;
+    } else {
+      questionIndex.value++;
+      currentQuestion.value = allQuestions[questionIndex.value];
     }
   }
 }
