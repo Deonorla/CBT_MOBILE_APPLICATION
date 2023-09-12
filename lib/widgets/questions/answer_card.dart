@@ -3,6 +3,8 @@ import 'package:cbt_mobile_application/configs/themes/sub_theme_data_mixin.dart'
 import 'package:cbt_mobile_application/configs/themes/ui_parameters.dart';
 import 'package:flutter/material.dart';
 
+enum AnswerStatus { correct, wrong, answered, notanswered }
+
 class AnswerCard extends StatelessWidget {
   final String answer;
   final bool isSelected;

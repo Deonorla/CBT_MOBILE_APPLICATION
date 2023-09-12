@@ -14,7 +14,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "90915404796-5o5bqjg6cq6u6jl0eu1kp7l96dnu7etl.apps.googleusercontent.com",
+          "client_id": "90915404796-2uc2jcdhj25p253aclndfegao0cj7enc.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,8 +27,15 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "90915404796-5o5bqjg6cq6u6jl0eu1kp7l96dnu7etl.apps.googleusercontent.com",
+              "client_id": "90915404796-2uc2jcdhj25p253aclndfegao0cj7enc.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "90915404796-12idg1dteu9trj34o4lio688mg24i5n5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cbtMobileApplication.RunnerTests"
+              }
             }
           ]
         }
