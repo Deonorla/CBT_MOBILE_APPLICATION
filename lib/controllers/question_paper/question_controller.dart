@@ -139,6 +139,6 @@ class QuestionController extends GetxController {
 
   void submit() {
     _timer!.cancel();
-    Get.offAll(() => const ResultScreen());
+    Get.to(() => const ResultScreen());
   }
 }
