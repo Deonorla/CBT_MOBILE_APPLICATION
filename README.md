@@ -1,2 +1,2 @@
-# cbt_mobile_application
+# Cbt mobile application
 Flutter project
